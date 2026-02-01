@@ -19,12 +19,12 @@ logger = logging.getLogger(__name__)
 
 class MedGemmaEngine:
     """
-    MedGemma 7B inference engine for clinical text understanding.
+    MedGemma 4B inference engine for clinical text understanding.
     Optimized for RTX 3080 (10GB VRAM).
     """
     
-    MODEL_NAME = "google/medgemma-7b"  # Primary model
-    # Fallback if MedGemma not accessible: "google/gemma-2-7b-it" or "meta-llama/Llama-2-7b-chat-hf"
+    MODEL_NAME = "google/medgemma-4b"  # Primary model (4B fits better on 10GB GPU)
+    # Fallback models: Gemma-3-4B or Llama-2-7B
     
     def __init__(self, model_name: Optional[str] = None, use_8bit: bool = True):
         """
@@ -104,8 +104,8 @@ class MedGemmaEngine:
     def _load_fallback_model(self):
         """Load fallback model if MedGemma unavailable"""
         fallback_models = [
-            "google/gemma-2-7b-it",
-            "meta-llama/Llama-2-7b-chat-hf",
+            "google/gemma-3-4b",
+            "meta-llama/Llama-2-7b-hf",
         ]
         
         for fallback in fallback_models:
