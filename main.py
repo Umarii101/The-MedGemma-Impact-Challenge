@@ -136,7 +136,7 @@ def demo_clinical_text_analysis(pipeline: MultimodalPipeline):
         
         # Save as JSON
         output_path = Path(__file__).parent / "demo_text_output.json"
-        output_path.write_text(result.model_dump_json(indent=2))
+        output_path.write_text(result.model_dump_json(indent=2), encoding='utf-8')
         print(f"\n✓ Results saved to: {output_path}")
         
     except Exception as e:

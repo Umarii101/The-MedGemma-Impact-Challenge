@@ -4,7 +4,7 @@ Primary LLM for clinical reasoning and text understanding.
 """
 
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from typing import Optional, Dict, List
 import logging
 import json
@@ -23,7 +23,7 @@ class MedGemmaEngine:
     Optimized for RTX 3080 (10GB VRAM).
     """
     
-    MODEL_NAME = "google/medgemma-4b"  # Primary model (4B fits better on 10GB GPU)
+    MODEL_NAME = "google/medgemma-4b-it"  # Primary model (4B fits better on 10GB GPU, -it = instruction-tuned)
     # Fallback models: Gemma-3-4B or Llama-2-7B
     
     def __init__(self, model_name: Optional[str] = None, use_8bit: bool = True):
@@ -71,8 +71,12 @@ class MedGemmaEngine:
             # Use 8-bit quantization for 10GB GPU
             if self.use_8bit:
                 logger.info("Loading model with 8-bit quantization...")
+                quantization_config = BitsAndBytesConfig(
+                    load_in_8bit=True,
+                    llm_int8_threshold=6.0,
+                )
                 model_kwargs.update({
-                    "load_in_8bit": True,
+                    "quantization_config": quantization_config,
                     "device_map": "auto",
                 })
             else:
@@ -104,7 +108,7 @@ class MedGemmaEngine:
     def _load_fallback_model(self):
         """Load fallback model if MedGemma unavailable"""
         fallback_models = [
-            "google/gemma-3-4b",
+            "google/gemma-3-4b-it",
             "meta-llama/Llama-2-7b-hf",
         ]
         
@@ -120,12 +124,25 @@ class MedGemmaEngine:
                 if self.tokenizer.pad_token is None:
                     self.tokenizer.pad_token = self.tokenizer.eos_token
                 
+                # Prepare model loading with proper quantization config
+                model_kwargs = {
+                    "trust_remote_code": True,
+                    "low_cpu_mem_usage": True,
+                    "device_map": "auto",
+                }
+                
+                if self.use_8bit:
+                    quantization_config = BitsAndBytesConfig(
+                        load_in_8bit=True,
+                        llm_int8_threshold=6.0,
+                    )
+                    model_kwargs["quantization_config"] = quantization_config
+                else:
+                    model_kwargs["torch_dtype"] = torch.float16
+                
                 self.model = AutoModelForCausalLM.from_pretrained(
                     fallback,
-                    load_in_8bit=self.use_8bit,
-                    device_map="auto",
-                    trust_remote_code=True,
-                    low_cpu_mem_usage=True,
+                    **model_kwargs
                 )
                 
                 self.model.eval()
