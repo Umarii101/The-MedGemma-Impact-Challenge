@@ -143,3 +143,6 @@ setup.txt
 *.bk
 
 Future Direction.txt
+# GGUF Quantized Models (Edge AI)
+*.gguf
+edge_deployment/models/

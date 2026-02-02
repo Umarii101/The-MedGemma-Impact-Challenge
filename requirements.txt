@@ -8,6 +8,12 @@ timm>=0.9.12
 pillow>=10.1.0
 opencv-python>=4.8.1
 
+# Medical-specialized models (Edge Deployment prioritizes BiomedCLIP over generic CLIP)
+# BiomedCLIP: microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224
+# - Medical image encoder trained on biomedical data
+# - Better for X-rays, pathology, dermatology than generic CLIP
+# - Smaller (300MB vs 1GB) for mobile deployment
+
 # Scientific computing
 numpy<2  # NumPy 1.x for compatibility with torch 2.1/2.2
 scipy>=1.11.4
