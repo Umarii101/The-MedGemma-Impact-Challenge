@@ -1,6 +1,6 @@
 # MedGemma Edge: Offline Clinical AI for Low-Resource Settings
 
-> **Kaggle MedGemma Impact Challenge** — Edge AI Prize Submission
+> **Kaggle MedGemma Impact Challenge** — Edge AI Submission
 
 [![Edge AI](https://img.shields.io/badge/Edge%20AI-Optimized-green)]()
 [![MedGemma](https://img.shields.io/badge/HAI--DEF-MedGemma%204B-blue)]()
@@ -15,7 +15,7 @@
 | **MedGemma 4B-IT** | 8.6 GB | 2.2 GB | 74% |
 | **BiomedCLIP** | 329 MB | 84 MB | 74% |
 
-**Target**: Android devices with 8GB+ RAM (Snapdragon 8s Gen 3)
+**Target**: Android devices
 
 ## 🚀 Quick Start
 
@@ -111,6 +111,13 @@ ALL TESTS PASSED ✅
 - **Competition**: [Kaggle MedGemma Impact Challenge](https://kaggle.com/competitions/med-gemma-impact-challenge)
 - **HAI-DEF Models**: [Google Health AI Developer Foundations](https://huggingface.co/google/medgemma-4b-it)
 - **Video Demo**: [Coming Soon]
+
+## 📥 Quantized Model Downloads
+
+The Models that I have quantized are too large for Git. Download from Google Drive:
+
+**[📁 Download Models (Google Drive)](https://drive.google.com/file/d/1JZmLMVmimPnL3tiSe0GkNxYENRP49qAP/view?usp=sharing)**
+
 
 ## ⚠️ Medical Disclaimer
 

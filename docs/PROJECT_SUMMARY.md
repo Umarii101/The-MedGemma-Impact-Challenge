@@ -91,7 +91,7 @@ This project delivers a **production-ready, offline-capable healthcare AI backen
 - RAM: 16GB+
 - Storage: 30GB
 
-**Mobile (Edge AI Prize)**:
+**Mobile (Edge AI)**:
 - SoC: Snapdragon 8s Gen 3 or equivalent
 - RAM: 8GB+
 - Storage: 3GB for quantized models
@@ -171,10 +171,6 @@ python tests/run_all_tests.py
 | Vision model | BiomedCLIP INT8 (84 MB) | ✅ |
 | Target device | Realme GT Neo 6 (SD 8s Gen 3) | ✅ |
 | Test validation | All tests passing | ✅ |
-
-## 📄 License
-
-MIT License - Free for research and educational use
 
 ## ⚠️ Medical Disclaimer
 

@@ -81,6 +81,7 @@ demo_text_output.json
 demo_image_output.json
 demo_multimodal_output.json
 outputs/
+edge_deployment/models.rar
 results/
 logs/
 temp/

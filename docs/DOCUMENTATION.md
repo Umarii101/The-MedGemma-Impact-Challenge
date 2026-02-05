@@ -397,6 +397,3 @@ MIT License - See LICENSE file for details
 - Justice: Improves access in low-resource settings
 
 ---
-
-**For questions or support**: See GitHub issues or documentation
-**For medical concerns**: Contact licensed healthcare provider

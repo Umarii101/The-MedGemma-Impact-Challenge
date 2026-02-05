@@ -6,7 +6,7 @@ Quantized models optimized for mobile/edge deployment on Android devices.
 
 Models are too large for Git. Download from Google Drive:
 
-**[📁 Download Models (Google Drive)](https://drive.google.com/YOUR_LINK_HERE)**
+**[📁 Download Models (Google Drive)](https://drive.google.com/file/d/1JZmLMVmimPnL3tiSe0GkNxYENRP49qAP/view?usp=sharing)**
 
 | File | Size | Description |
 |------|------|-------------|

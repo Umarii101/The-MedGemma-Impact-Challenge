@@ -6,7 +6,7 @@
 
 ```bash
 # Clone or download the project
-cd medgemma-backend
+cd The-MedGemma-Impact-Challenge
 
 # Create virtual environment
 python -m venv venv

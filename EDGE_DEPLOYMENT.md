@@ -138,7 +138,7 @@ ALL TESTS PASSED
 - Delayed diagnosis risks patient outcome
 
 **With Edge AI**:
-1. Capture X-ray image with smartphone
+1. Test X-ray image with smartphone
 2. BiomedCLIP extracts visual features (100ms)
 3. MedGemma analyzes symptoms + image context (15-30s)
 4. Receive structured assessment with recommendations
@@ -185,4 +185,4 @@ tests/
 
 ---
 
-*Built for the Kaggle MedGemma Impact Challenge — Edge AI Prize*
+*Built for the Kaggle MedGemma Impact Challenge — Edge AI*
