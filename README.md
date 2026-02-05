@@ -27,9 +27,18 @@ cd The-MedGemma-Impact-Challenge
 # Install dependencies
 pip install -r requirements.txt
 
+#Download The quantized Models First, I have provided the link to the models below
+
 # Run validation tests
 python tests/run_all_tests.py
 ```
+
+## 📥 Quantized Model Downloads
+
+The Models that I have quantized are too large for Git. Download from Google Drive:
+
+**[📁 Download Models (Google Drive)](https://drive.google.com/file/d/1JZmLMVmimPnL3tiSe0GkNxYENRP49qAP/view?usp=sharing)**
+
 
 ## 📁 Repository Structure
 
@@ -112,21 +121,9 @@ ALL TESTS PASSED ✅
 - **HAI-DEF Models**: [Google Health AI Developer Foundations](https://huggingface.co/google/medgemma-4b-it)
 - **Video Demo**: [Coming Soon]
 
-## 📥 Quantized Model Downloads
-
-The Models that I have quantized are too large for Git. Download from Google Drive:
-
-**[📁 Download Models (Google Drive)](https://drive.google.com/file/d/1JZmLMVmimPnL3tiSe0GkNxYENRP49qAP/view?usp=sharing)**
-
 
 ## ⚠️ Medical Disclaimer
 
 This system is for **assistive purposes only**. Not FDA approved. All outputs require validation by licensed healthcare providers.
 
-## 📄 License
-
-MIT License — See [LICENSE](LICENSE)
-
----
-
-*Built for the Kaggle MedGemma Impact Challenge — Edge AI Prize*
+*Built for the Kaggle MedGemma Impact Challenge — Edge AI*
