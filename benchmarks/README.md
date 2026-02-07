@@ -42,7 +42,7 @@ Performance measurements for quantized edge deployment models.
 | CPU | 4x Cortex-A720 @ 3.0GHz + 4x Cortex-A520 @ 2.0GHz |
 | GPU | Adreno 735 |
 | NPU | Hexagon NPU |
-| RAM | 8-12 GB LPDDR5X |
+| RAM | 12 GB LPDDR5X |
 | Storage | UFS 4.0 |
 
 ### Expected Mobile Performance
@@ -66,7 +66,7 @@ Based on similar Snapdragon 8 Gen series devices:
 | System Reserve | ~2 GB |
 | **Total Required** | **~5 GB** |
 
-*Fits comfortably in 8GB device RAM*
+*Fits comfortably in 12GB device RAM*
 
 ## Latency Breakdown (Estimated)
 
