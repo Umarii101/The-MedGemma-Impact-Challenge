@@ -1,0 +1,52 @@
+# ============================================
+# Android / Gradle
+# ============================================
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/app/build/
+/captures
+.externalNativeBuild/
+.cxx/
+local.properties
+*.hprof
+*.apk
+*.aab
+*.ap_
+
+# Kotlin
+.kotlin/
+
+# ============================================
+# Build artifacts & logs
+# ============================================
+build_log.txt
+flag_audit.txt
+*.log
+
+# ============================================
+# llama.cpp source (cloned separately)
+# ============================================
+# The llama_cpp_repo/ is at Edge_Deployment level, not inside Android_App,
+# but just in case someone copies it here:
+llama_cpp_repo/
+
+# ============================================
+# Model files (too large for Git)
+# ============================================
+*.gguf
+*.onnx
+*.safetensors
+*.bin
+*.h5
+
+# ============================================
+# OS files
+# ============================================
+Thumbs.db
+Desktop.ini
+.DS_Store
+._*
