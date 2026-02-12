@@ -81,6 +81,13 @@ The Models that I have quantized are too large for Git. Download from Google Dri
 │   ├── test_medgemma.py
 │   └── run_all_tests.py
 │
+├── evaluation/               # ⭐ Model quality evaluations
+│   ├── README.md             # Methodology, results, interpretation
+│   ├── biomedclip_classification_eval.py  # Zero-shot accuracy + INT8 fidelity
+│   ├── medgemma_clinical_eval.py          # Clinical output quality rubric
+│   ├── results/              # Pre-computed JSON results
+│   └── test_data/            # Labeled test images
+│
 ├── desktop_pipeline/         # Desktop/GPU prototype (RTX 3080)
 │   ├── README.md             # Architecture & usage
 │   ├── main.py               # Demo script
@@ -104,6 +111,15 @@ The Models that I have quantized are too large for Git. Download from Google Dri
 |-------|------|----------|-------|
 | BiomedCLIP INT8 | 84 MB | 99.95% vs FP32 | 126 ms inference |
 | MedGemma Q4_K_S | 2.2 GB | High quality | 32.8 tok/s pp, 7.8 tok/s gen |
+
+### Model Quality Evaluation (see [evaluation/README.md](evaluation/README.md))
+
+| Evaluation | Metric | Result |
+|------------|--------|--------|
+| BiomedCLIP Zero-Shot | Top-5 clinical hit rate | **80%** (4/5 test images) |
+| BiomedCLIP INT8 Fidelity | Cosine similarity vs FP32 | **0.9991** |
+| MedGemma Clinical Quality | Automated rubric (10-pt) | **8.6/10 EXCELLENT** |
+| MedGemma Safety | No absolute diagnostic claims | **100%** (5/5 cases) |
 
 ### Validated Tests
 
@@ -136,6 +152,7 @@ ALL TESTS PASSED ✅
 | [docs/DOCUMENTATION.md](docs/DOCUMENTATION.md) | Technical deep dive — pipelines, safety, output schema |
 | [docs/SETUP_GUIDE.md](docs/SETUP_GUIDE.md) | Development environment setup |
 | [docs/PROJECT_SUMMARY.md](docs/PROJECT_SUMMARY.md) | Executive summary |
+| [evaluation/README.md](evaluation/README.md) | **⭐ Model quality evaluations** — BiomedCLIP accuracy + MedGemma clinical quality |
 
 ## 🔗 Links
 

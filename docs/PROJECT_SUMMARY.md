@@ -73,8 +73,20 @@ This project delivers a **production-ready, offline-capable healthcare AI backen
 
 | Model | Format | Size | Accuracy |
 |-------|--------|------|----------|
-| BiomedCLIP Vision | ONNX INT8 | 84 MB | 99.95% vs FP32 |
+| BiomedCLIP Vision | ONNX INT8 | 84 MB | 99.91% cosine vs FP32 |
 | MedGemma 4B | GGUF Q4_K_S | 2.2 GB | 74% size reduction |
+
+### Model Quality Evaluation
+
+Evaluated with 5 labeled chest X-rays and 5 clinical cases. Full methodology and results: [`evaluation/README.md`](../evaluation/README.md).
+
+| Evaluation | Key Metric | Result |
+|------------|-----------|--------|
+| BiomedCLIP Zero-Shot Classification | Top-5 clinical hit rate | 80% (4/5) |
+| BiomedCLIP Quantization Fidelity | INT8 vs FP32 cosine similarity | 0.9991 |
+| MedGemma Clinical Quality | Automated rubric (10-point scale) | 8.6/10 EXCELLENT |
+| MedGemma Safety — No Absolutes | % cases without diagnostic claims | 100% (5/5) |
+| MedGemma Completeness | % cases with actionable next steps | 100% (5/5) |
 
 ### Performance Benchmarks (RTX 3080)
 
@@ -119,6 +131,12 @@ Project 1/
 │   ├── test_biomedclip.py
 │   ├── test_medgemma.py
 │   └── run_all_tests.py
+├── evaluation/                 # ⭐ Model quality evaluations
+│   ├── README.md              # Methodology & results
+│   ├── biomedclip_classification_eval.py
+│   ├── medgemma_clinical_eval.py
+│   ├── results/               # Pre-computed JSON results
+│   └── test_data/             # Labeled test images
 ├── desktop_pipeline/           # Desktop/GPU prototype (RTX 3080)
 │   ├── main.py                # Demo script
 │   ├── models/                # MedGemma, BiomedCLIP, risk model loaders
