@@ -1,4 +1,4 @@
-# MedGemma Edge: Offline Clinical AI for Low-Resource Settings
+# MedLens: Offline Clinical AI for Low-Resource Settings
 
 > **Kaggle MedGemma Impact Challenge** — Edge AI Submission
 
@@ -8,7 +8,7 @@
 
 ## 🎯 Project Overview
 
-**MedGemma Edge** brings Google's healthcare AI models to mobile devices, enabling offline clinical decision support in environments without reliable internet access.
+**MedLens** brings Google's healthcare AI models to mobile devices, enabling offline clinical decision support in environments without reliable internet access.
 
 | Model | Original | Quantized | Reduction |
 |-------|----------|-----------|-----------|

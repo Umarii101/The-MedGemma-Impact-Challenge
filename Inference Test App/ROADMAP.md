@@ -1,4 +1,4 @@
-# Roadmap — MedGemma Edge Android App
+# Roadmap — MedLens Android App
 
 > **Note:** This roadmap was written for the **proof-of-concept** test app (`android_app/`).
 > Many Phase 2 and Phase 4 goals have been **achieved** in the production app — see [`Medlens/README.md`](../Medlens/README.md).
