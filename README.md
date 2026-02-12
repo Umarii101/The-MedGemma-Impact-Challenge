@@ -4,7 +4,7 @@
 
 [![Edge AI](https://img.shields.io/badge/Edge%20AI-Optimized-green)]()
 [![MedGemma](https://img.shields.io/badge/HAI--DEF-MedGemma%204B-blue)]()
-[![BioMedClip](https://img.shields.io/badge/BiomedCLIP-INT8%20256--vit-purple)]()
+[![BioMedClip](https://img.shields.io/badge/BiomedCLIP%20256--vit-purple)]()
 [![License](https://img.shields.io/badge/License-MIT-yellow)]()
 
 ## 🎯 Project Overview
