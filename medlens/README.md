@@ -163,7 +163,7 @@ Models are not included in the APK. Push them to the device:
 # Create model directory
 adb shell mkdir -p /storage/emulated/0/MedGemmaEdge/
 
-# Push quantized models (download from Google Drive — see root README)
+# Push quantized models (download from Kaggle — see root README)
 adb push biomedclip_vision_int8.onnx /storage/emulated/0/MedGemmaEdge/
 adb push medgemma-4b-q4_k_s-final.gguf /storage/emulated/0/MedGemmaEdge/
 ```

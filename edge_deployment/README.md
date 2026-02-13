@@ -4,9 +4,12 @@ Quantized models optimized for mobile/edge deployment on Android devices.
 
 ## 📥 Model Downloads
 
-Models are too large for Git. Download from Google Drive:
+The Models that I have quantized are too large for Git. Download from Kaggle:
 
-**[📁 Download Models (Google Drive)](https://drive.google.com/file/d/1JZmLMVmimPnL3tiSe0GkNxYENRP49qAP/view?usp=sharing)**
+**[📁 Download Models (Kaggle)](https://www.kaggle.com)**
+- [MedGemma 4B Q4_K_S GGUF](https://www.kaggle.com/models/muhammadumar2001/medgemma-4b-q4-k-s-gguf)
+- [BiomedCLIP Vision INT8 ONNX](https://www.kaggle.com/models/muhammadumar2001/biomedclip-vision-int8-onnx)
+
 
 | File | Size | Description |
 |------|------|-------------|
